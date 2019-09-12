@@ -1,0 +1,121 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/*All css goes in here so that cosmetic can amend it from here. Css can be distinguish by adding 
+form name at front of the class.*/
+
+body {
+    margin: 0;
+}
+
+.main-container {
+    min-height: 100%;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    padding-bottom: 100px;
+    background-color: rgba(242, 242, 242, 0.47);
+}
+
+
+/* Login Page Start */
+
+.login-full-height-body {
+    min-height: 100vh;
+}
+
+.login-content {
+    padding: 0px 12px 12px;
+}
+
+.login-row-align-center {
+    justify-content: center;
+}
+
+.login-logo {
+    padding: 48px!important;
+    text-align: center;
+}
+
+.login-logo img,
+.login-footer-img img {
+    width: 100%;
+}
+
+.login-shadow-input-box {
+    border: none!important;
+    background-color: #fafafa!important;
+    box-shadow: 1px 2px 0px 0 #efefef;
+}
+
+.login-shadow-input-box:focus {
+    box-shadow: 1px 2px 0px 0 #efefef!important;
+}
+
+.login-dv-btn-custom {
+    padding: 12px;
+}
+
+.login-btn-custom {
+    background: #f7a100!important;
+    color: #ffffff!important;
+}
+
+.login-row-align-center small {
+    color: #c1c1c1;
+    font-size: 14px;
+}
+
+.login-row-align-center u {
+    color: #a6a6a6;
+    font-size: 12px;
+}
+
+.login-footer-img {
+    padding: 0!important;
+}
+
+.login-footer .login-row-align-center {
+    min-height: 22vh!important;
+}
+
+.login-footer .login-footer-img {
+    position: absolute;
+    bottom: 0;
+}
+
+.login-is-invalid {
+    border-color: #dc3545;
+}
+
+.login-invalid-response {
+    font-size: 80%;
+    color: #dc3545;
+}
+
+.login-modal-loading {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #333333;
+    opacity: 0.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: center;
+    overflow: show;
+}
+
+.login-link-hover {
+    cursor: pointer;
+}
+
+.login-link-hover:focus {
+    outline: none;
+}
+
+
+/* Login Page End */

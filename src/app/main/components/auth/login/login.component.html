@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Consea</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body class="login-full-height-body">
+    <div class="container">
+        <div class="login-content">
+            <form [formGroup] = "loginForm">
+            <div class="row login-row-align-center">
+                <div class="col-md-4 col-sm-12 login-logo">
+                    <img src="../../../../../assets/rentee_logo.png" alt="">
+                </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                <div class="col-md-4 col-sm-12">
+                    <small class="small">NIK / NAMA ERO <span class="text-danger">*</span></small>
+                    <input type="text" class="form-control login-shadow-input-box" formControlName="name">
+                    <div *ngIf="submitted && f.name.errors" class="login-invalid-response">
+                        <div *ngIf="f.name.errors.required"> Username is required.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                <div class="col-md-4 col-sm-12">
+                    <small class="small">NOMOR LAPORAN</small> 
+                    <input type="text" class="form-control login-shadow-input-box" formControlName="number">
+                </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                <div class="col-md-4 col-sm-12">
+                    <small class="small">PASSWORD</small>
+                    <input type="password" class="form-control login-shadow-input-box" formControlName="password" >
+                    <div *ngIf="submitted && f.password.errors" class="login-invalid-response">
+                        <div *ngIf="f.password.errors.required"> Password is required.</div>
+                        <div *ngIf="f.password.errors.pattern">Password must contain at least 6 characters, one capital letter, number and one special character.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                <div class="col-md-4 col-sm-12 login-dv-btn-custom">
+                    <button class="btn btn-block login-btn-custom" value="Submit" (click)="onSubmit()">Submit</button>
+                </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                    <div class="col-md-4 col-sm-12">
+                        <div class="login-invalid-response" *ngIf = "IsInvalidUserMessage"> Invalid username or password.</div>
+                    </div>
+            </div>
+            <div class="row form-group login-row-align-center">
+                <div class="col-md-4 col-sm-12 text-center login-link-hover" [routerLink]="['/auth/forget-password']">
+                    <u>Ooops, I forget my password :(</u>
+                </div>
+            </div>
+            <div class="row login-row-align-center">
+                <div class="col-md-4 col-sm-12 text-center login-link-hover" [routerLink]="['/auth/registration']">
+                    <u>Sign Up</u>
+                </div>
+            </div>
+            </form>
+        </div>
+        <div class="login-footer">
+            <div class="row login-row-align-center">
+                <div class="col-md-3 col-sm-12 login-footer-img">
+                    <img src="../../../../../assets/footer_bg.png">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<app-spinner [loading]="displaySpinner"></app-spinner>
+</html>
